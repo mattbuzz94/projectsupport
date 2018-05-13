@@ -1,0 +1,26 @@
+<div class="table-responsive-md">
+  <table class="table table light table-hover">
+    <thead>
+      <tr>
+        <th>Número Chamado</th>
+        <th>Projeto</th>
+        <th>Título</th>
+        <th>Tipo</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let chamado of chamados; let i = index;">
+        <td>{{ chamado.numeroChamado }}</td>
+        <td>{{ chamado.projeto }}</td>
+        <td>{{ chamado.tituloChamado }}</td>
+        <td>{{ chamado.tipoChamado }}</td>
+        <td>{{ chamado.statusChamado }}</td>
+      </tr>
+      <tr>
+        <td colspan="6" style="text-align: right;">Total de Registros: {{ chamados.length }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
