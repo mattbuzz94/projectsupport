@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ListaChamadosComponent } from './lista-chamados/lista-chamados.component';
+import { FormBuscaComponent } from './form-busca/form-busca.component';
 
 const routes: Routes = [{
   path: '',
@@ -12,6 +13,10 @@ const routes: Routes = [{
     {
       path: 'dashboard',
       component: DashboardComponent,
+    },
+    {
+      path: 'form-busca',
+      component: FormBuscaComponent,
     },
     {
       path: 'lista-chamados',

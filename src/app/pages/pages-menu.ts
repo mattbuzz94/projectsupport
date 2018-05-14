@@ -8,8 +8,13 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
+    title: 'Busca Base de Conhecimento',
+    icon: 'nb-search',
+    link: '/pages/form-busca',
+  },
+  {
     title: 'Lista Chamados',
-    icon: 'nb-home',
+    icon: 'nb-list',
     link: '/pages/lista-chamados',
   },
   {

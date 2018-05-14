@@ -5,6 +5,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { ListaChamadosModule } from './lista-chamados/lista-chamados.module';
+import { FormBuscaModule } from './form-busca/form-busca.module';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -16,6 +17,7 @@ const PAGES_COMPONENTS = [
     ThemeModule,
     DashboardModule,
     ListaChamadosModule,
+    FormBuscaModule,
 
   ],
   declarations: [

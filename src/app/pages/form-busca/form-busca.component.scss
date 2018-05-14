@@ -1,0 +1,17 @@
+@import '../../@theme/styles/themes';
+
+@include nb-install-component() {
+  .full-width {
+    flex: 1;
+    min-width: 220px;
+  }
+
+  nb-checkbox {
+    margin-bottom: 1rem;
+  }
+
+  
+  nb-card.inline-form-card nb-card-body {
+    padding-bottom: 0;
+  }
+}
