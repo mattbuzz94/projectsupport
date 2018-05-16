@@ -3,48 +3,80 @@
     <nb-card>
       <nb-card-header>Busca Base de Conhecimento</nb-card-header>
       <nb-card-body>
-        <form>
+        <form #buscaForm="ngForm" (ngSubmit)="onFormSubmit(buscaForm)">
           <div class="form-group row">
-            <label for="inputEmail1" class="col-sm-3 col-form-label">Email</label>
+            <label for="textoBusca" class="col-sm-3 col-form-label">Texto</label>
             <div class="col-md-12">
-              <input type="search" class="form-control" id="inputEmail1" placeholder="Mensagem de erro e/ou texto para busca">
+              <input name="solucaoProposta" ngModel required #solucaoProposta="ngModel" type="search" class="form-control" id="solucaoProposta" placeholder="Mensagem de erro e/ou texto para busca">             
             </div>
           </div>
-          <div class="form-group row">
-            <label for="inputPassword2" class="col-sm-3 col-form-label">Password</label>
-            <div class="col-md-12">
-              <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-sm-3">Radios</label>
-            <div class="col-md-12">
-              <div class="form-check">
-                <label class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" name="gridRadios" checked>
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">Option one is this and that&mdash;be sure to include why it's great</span>
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" name="gridRadios">
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">Option two can be something else and selecting it will deselect option one</span>
-                </label>
-              </div>
-              <div class="form-check disabled">
-                <label class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" name="gridRadios" disabled>
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">Option three is disabled</span>
-                </label>
-              </div>
-            </div>
-          </div>
+          <div class="form-group">
+            <label for="projeto">Sistema</label>
+            <select class="form-control" id="projeto" name="projeto" ngModel required #projeto="ngModel">
+              <option value=""></option>
+              <option value="Import">Import</option>
+              <option value="33">BW SYS</option>
+              <option value="52">Base Genérica</option>
+              <option value="26">Broker SYS</option>
+              <option value="27">Broker SYS - WEB</option>
+              <option value="51">Cambio Exp SYS</option>
+              <option value="50">Cambio Imp SYS</option>
+              <option value="29">Cambio SYS</option>
+              <option value="80">ComexOnDemand / eSoftcomex</option>
+              <option value="847">Comexcontent</option>
+              <option value="81">Contábil Sys</option>
+              <option value="43">DCI SYS</option>
+              <option value="44">DCR SYS</option>
+              <option value="83">DE Sys</option>
+              <option value="30">DrawBack SYS</option>
+              <option value="39">EV MRA/GRA SYS</option>
+              <option value="2">Export SYS</option>
+              <option value="64">Export SYS Internacional</option>
+              <option value="79">Extrator Siscomex</option>
+              <option value="1">Import SYS</option>
+              <option value="65">Import SYS Internacional</option>
+              <option value="100">InOut C/S</option>
+              <option value="62">InOut Java</option>
+              <option value="32">Integração</option>
+              <option value="72">Integração Datasul</option>
+              <option value="90">Integração JDE</option>
+              <option value="68">Integração Oracle</option>
+              <option value="69">Integração Oracle (SOA Suite)</option>
+              <option value="103">Integração Oracle R12 DBLink</option>
+              <option value="67">Integração SAP</option>
+              <option value="75">Integração SAP - Business One</option>
+              <option value="66">Integração Siscomex</option>
+              <option value="70">Integração TXT</option>
+              <option value="71">Integração XML</option>
+              <option value="89">NOVOEX Sys</option>
+              <option value="53">Pexpam SYS</option>
+              <option value="77">Pre-Harpia</option>
+              <option value="84">RAF Sys</option>
+              <option value="22">RegEsp SYS</option>
+              <option value="63">Regimes Internacionais</option>
+              <option value="78">Repetro Sys</option>
+              <option value="82">Replat Sys</option>
+              <option value="48">SCAN SYS</option>
+              <option value="61">SFWSOA Console</option>
+              <option value="109">SISCOSERV</option>
+              <option value="872">TAXIT - CLASSIFIER</option>
+              <option value="841">TAXIT - EXPORT</option>
+              <option value="117">TAXIT - FTA</option>
+              <option value="830">TAXIT - IMPORT</option>
+              <option value="831">TAXIT - INOUT</option>
+              <option value="848">TAXIT - INTEGRAÇÃO - ORACLE</option>
+              <option value="849">TAXIT - INTEGRAÇÃO - SAP</option>
+              <option value="844">TAXIT - LOCAL_CN</option>
+              <option value="851">TAXIT - LOCAL_JP</option>
+              <option value="850">TAXIT - LOCAL_US</option>
+              <option value="842">TAXIT - RPS</option>
+              <option value="91">eSoftcomex Drawback</option>
+            </select>
+          </div>          
           <div class="form-group row">
             <div class="offset-sm-3 col-md-12">
-              <button type="submit" class="btn btn-primary">Sign in</button>
+              <button type="submit" class="btn btn-primary" id='btn'>Sign in</button>
+              <!--(click)='ServiceOnButtonClick()'-->
             </div>
           </div>
         </form>

@@ -8,7 +8,7 @@ describe('ListaChamadosComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListaChamadosComponent ]
+      declarations: [ ListaChamadosComponent ],
     })
     .compileComponents();
   }));

@@ -18,6 +18,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/lista-chamados',
   },
   {
+    title: 'Lista',
+    icon: 'nb-list',
+    link: '/pages/lista',
+  },
+  {
     title: 'FEATURES',
     group: true,
   },

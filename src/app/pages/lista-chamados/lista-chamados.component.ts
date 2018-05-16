@@ -5,9 +5,9 @@ import { Chamado } from '../../@core/data/chamado';
 import { ChamadoService } from '../../@core/data/chamado.service';
 
 @Component({
-  selector: 'app-lista-chamados',
+  selector: 'ngx-lista-chamados',
   templateUrl: './lista-chamados.component.html',
-  styleUrls: ['./lista-chamados.component.scss']
+  styleUrls: ['./lista-chamados.component.scss'],
 })
 export class ListaChamadosComponent implements OnInit {
 
@@ -20,6 +20,6 @@ export class ListaChamadosComponent implements OnInit {
   ngOnInit() {
     /*CHAMA O SERVIÇO E RETORNA TODAS AS PESSOAS CADASTRADAS */
     // this.chamadoService.getChamadoById(555699).subscribe((chamado) => this.chamado = chamado);
-    this.chamadoService.getRepos('fat_env_ap', 'import').subscribe(products => this.chamados = products);
+    // this.chamadoService.getRepos('fat_env_ap', 'import').subscribe(products => this.chamados = products);
   }
 }

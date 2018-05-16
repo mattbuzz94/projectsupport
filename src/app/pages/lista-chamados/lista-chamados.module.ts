@@ -14,7 +14,7 @@ import { ChamadoService } from '../../@core/data/chamado.service';
     ListaChamadosComponent,
   ],
   providers: [
-    ChamadoService
+    ChamadoService,
   ],
 })
 export class ListaChamadosModule { }

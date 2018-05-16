@@ -8,7 +8,7 @@ describe('FormBuscaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormBuscaComponent ]
+      declarations: [ FormBuscaComponent ],
     })
     .compileComponents();
   }));
