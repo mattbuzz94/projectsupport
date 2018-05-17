@@ -17,24 +17,7 @@ export class FormBuscaComponent {
     private router: Router) { }
 
     onFormSubmit(userForm: NgForm) {
-      this.chamadoService.getRepos(userForm.controls['solucaoProposta'].
+      this.chamadoService.getChamadosBusca(userForm.controls['solucaoProposta'].
       value, userForm.controls['projeto'].value).subscribe(products => this.chamados = products);
   }
-
-  /*onSubmit = function (chamado) {
-    let obj: Chamado = JSON.parse(chamado);
-    console.log(obj.solucaoProposta);
-    console.log(obj.projeto);
-    console.log(chamado);
-
-    this.chamadoService.getRepos(obj.solucaoProposta,obj.projeto).subscribe(products => this.chamados = products);
-  }*/
-
-
-  // ngOnInit() {
-  /*CHAMA O SERVIÇO E RETORNA TODAS AS PESSOAS CADASTRADAS */
-  // this.chamadoService.getChamadoById(555699).subscribe((chamado) => this.chamado = chamado);
-  // this.chamadoService.getRepos('fat_env_ap', 'import').subscribe(products => this.chamados = products);
-  // }
-
 }

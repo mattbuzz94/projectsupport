@@ -17,12 +17,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-list',
     link: '/pages/lista-chamados',
   },
-  {
-    title: 'Lista',
-    icon: 'nb-list',
-    link: '/pages/lista',
-  },
-  {
+  /*{
     title: 'FEATURES',
     group: true,
   },
@@ -47,5 +42,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/auth/reset-password',
       },
     ],
-  },
+  },*/
 ];

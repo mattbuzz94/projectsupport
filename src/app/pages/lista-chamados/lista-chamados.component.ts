@@ -10,16 +10,17 @@ import { ChamadoService } from '../../@core/data/chamado.service';
   styleUrls: ['./lista-chamados.component.scss'],
 })
 export class ListaChamadosComponent implements OnInit {
-
-  private titulo: string;
   chamados: Chamado[] = [];
-
-  constructor(private chamadoService: ChamadoService,
-    private router: Router) { }
+  showList: boolean;
+  constructor(private chamadoService: ChamadoService) {
+    this.showList = false;
+  }
+  fetchDataFromService() {
+    this.showList = true;
+    this.chamados = this.chamadoService.getChamadoData();
+  }
 
   ngOnInit() {
-    /*CHAMA O SERVIÇO E RETORNA TODAS AS PESSOAS CADASTRADAS */
-    // this.chamadoService.getChamadoById(555699).subscribe((chamado) => this.chamado = chamado);
-    // this.chamadoService.getRepos('fat_env_ap', 'import').subscribe(products => this.chamados = products);
+    this.fetchDataFromService();
   }
 }
