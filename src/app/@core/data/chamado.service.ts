@@ -5,7 +5,6 @@ import { environment } from '../../../environments/environment';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { catchError, tap } from 'rxjs/operators';
 import { Chamado } from './chamado';
-import { RequestOptions } from '@angular/http';
 import { Router } from '@angular/router';
 import { of } from 'rxjs/observable/of';
 
