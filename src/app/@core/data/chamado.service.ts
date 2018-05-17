@@ -2,14 +2,12 @@
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
-import { Http, Response } from '@angular/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { catchError, tap } from 'rxjs/operators';
 import { Chamado } from './chamado';
 import { RequestOptions } from '@angular/http';
-import { Headers } from '@angular/http';
-import { of } from 'rxjs/observable/of';
 import { Router } from '@angular/router';
+import { of } from 'rxjs/observable/of';
 
 const API_URL = environment.apiUrl;
 

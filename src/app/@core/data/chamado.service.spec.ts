@@ -5,7 +5,7 @@ import { ChamadoService } from './chamado.service';
 describe('ChamadoService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ChamadoService]
+      providers: [ChamadoService],
     });
   });
 

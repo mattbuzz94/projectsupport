@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Chamado } from '../../@core/data/chamado';
 import { ChamadoService } from '../../@core/data/chamado.service';
 import { Router } from '@angular/router';
