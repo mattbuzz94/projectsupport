@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { catchError, tap } from 'rxjs/operators';
-import { Router } from '@angular/router';
 import { of } from 'rxjs/observable/of';
 import { Funcionalidade } from './funcionalidade';
 
@@ -12,7 +11,7 @@ const API_URL = environment.apiUrl;
 @Injectable()
 export class FuncionalidadeService {
   funcionalidades: Funcionalidade[] = [];
-  constructor(private httpClient: HttpClient, private router: Router) {
+  constructor(private httpClient: HttpClient) {
 
   }
   public getFuncionalidades(codSistema: string): Observable<Funcionalidade[]> {

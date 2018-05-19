@@ -5,7 +5,7 @@ import { FuncionalidadeService } from './funcionalidade.service';
 describe('FuncionalidadeService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [FuncionalidadeService]
+      providers: [FuncionalidadeService],
     });
   });
 
