@@ -7,12 +7,13 @@
           <div class="form-group row">
             <label for="textoBusca" class="col-sm-3 col-form-label">Texto</label>
             <div class="col-md-12">
-              <input name="solucaoProposta" ngModel required #solucaoProposta="ngModel" type="search" class="form-control" id="solucaoProposta" placeholder="Mensagem de erro e/ou texto para busca">             
+              <input name="solucaoProposta" ngModel required #solucaoProposta="ngModel" type="search" class="form-control" id="solucaoProposta"
+                placeholder="Mensagem de erro e/ou texto para busca">
             </div>
           </div>
           <div class="form-group">
             <label for="projeto">Sistema</label>
-            <select class="form-control" id="projeto" name="projeto" ngModel required #projeto="ngModel">
+            <select (change)="onChange($event.target.value)" class="form-control" id="projeto" name="projeto" ngModel required #projeto="ngModel">
               <option value=""></option>
               <option value="Import">Import</option>
               <option value="33">BW SYS</option>
@@ -72,7 +73,13 @@
               <option value="842">TAXIT - RPS</option>
               <option value="91">eSoftcomex Drawback</option>
             </select>
-          </div>          
+          </div>
+          <div class="form-group">
+            <label for="funcionalidade">Funcionalidades</label>
+            <select class="form-control" id="funcionalidade" name="funcionalidade" ngModel #funcionalidade="ngModel">
+              <option [ngValue]="funcionalidade" *ngFor="let funcionalidade of funcionalidades">{{funcionalidade.descricaoFuncionalidade}}</option>
+            </select>
+          </div>
           <div class="form-group row">
             <div class="offset-sm-3 col-md-12">
               <button type="submit" class="btn btn-primary" id='btn'>Sign in</button>
