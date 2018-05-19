@@ -25,6 +25,6 @@ export class FormBuscaComponent {
   onChange(deviceValue) {
     // tslint:disable-next-line:no-console
     console.log(deviceValue);
-    this.funcionalidadeService.getFuncionalidades(deviceValue.value).subscribe(funcionalidades => this.funcionalidades = funcionalidades);
+    this.funcionalidadeService.getFuncionalidades(deviceValue).subscribe(funcionalidades => this.funcionalidades = funcionalidades);
   }
 }
