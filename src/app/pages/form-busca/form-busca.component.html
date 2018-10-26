@@ -6,12 +6,13 @@
         <form #buscaForm="ngForm" (ngSubmit)="onFormSubmit(buscaForm)">
           <div class="form-group row col-md-12">
             <label for="textoBusca" class="col-sm-3 col-form-label">Texto</label>
-            <input style="margin-left: 15px;" name="solucaoProposta" ngModel required #solucaoProposta="ngModel" type="search" class="form-control" id="solucaoProposta"
-              placeholder="Mensagem de erro e/ou texto para busca">
+            <input style="margin-left: 15px;" name="solucaoProposta" ngModel required #solucaoProposta="ngModel" type="search"
+              class="form-control" id="solucaoProposta" placeholder="Mensagem de erro e/ou texto para busca">
           </div>
           <div class="form-group col-md-8">
             <label for="projeto">Sistema</label>
-            <select (change)="onChange($event.target.value)" class="form-control" id="projeto" name="projeto" ngModel required #projeto="ngModel">
+            <select (change)="onChange($event.target.value)" class="form-control" id="projeto" name="projeto" ngModel
+              required #projeto="ngModel">
               <option value=""></option>
               <option value="Import">Import</option>
               <option value="33">BW SYS</option>
